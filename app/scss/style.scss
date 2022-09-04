@@ -1,6 +1,7 @@
 @import 'vars';
 @import 'fonts';
 @import 'reset';
+@import 'libs';
 @import 'global';
 
 .header {
@@ -77,6 +78,30 @@
 
   &__item+&__item {
     margin-left: 40px;
+  }
+}
+
+.benefit {
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    margin: 120px 0;
+    position: relative;
+  }
+
+  &__item {
+    text-align: center;
+    max-width: 193px
+  }
+
+  &__img {
+    margin-bottom: 47px;
+  }
+
+  &__title {
+    @extend %roboto-300;
+    font-size: 20px;
+    line-height: 27px;
   }
 }
 

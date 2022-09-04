@@ -9,7 +9,7 @@ const del = require('del');
 
 function browser_sync() {
   browserSync.init({
-    server:{
+    server: {
       baseDir: 'app/'
     },
     notify: false
@@ -17,26 +17,27 @@ function browser_sync() {
 }
 function styles() {
   return src('app/scss/style.scss')
-  .pipe(scss({
-    outputStyle: 'compressed'
-  }))
-  .pipe(concat('style.min.css'))
-  .pipe(autoprefixer({
-    overrideBrowserslist:['last 10 versions'],
-    grid: true
-  }))
-  .pipe(dest('app/css'))
+    .pipe(scss({
+      outputStyle: 'compressed'
+    }))
+    .pipe(concat('style.min.css'))
+    .pipe(autoprefixer({
+      overrideBrowserslist: ['last 10 versions'],
+      grid: true
+    }))
+    .pipe(dest('app/css'))
     .pipe(browserSync.stream())
 }
 
 function scripts() {
   return src([
     'node_modules/jquery/dist/jquery.js',
+    'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js',
     'app/js/main.js'
   ])
-  .pipe(concat('main.min.js'))
-  .pipe(uglify())
-  .pipe(dest('app/js'))
+    .pipe(concat('main.min.js'))
+    .pipe(uglify())
+    .pipe(dest('app/js'))
     .pipe(browserSync.stream())
 }
 
@@ -53,7 +54,7 @@ function images() {
         ]
       })
     ]))
-  .pipe(dest('dist/images'))
+    .pipe(dest('dist/images'))
 }
 
 function build() {
@@ -61,11 +62,11 @@ function build() {
     'app/**/*.html',
     'app/css/style.min.css',
     'app/js/main.min.js'
-  ], {base: 'app'})
-  .pipe(dest('dist'))
+  ], { base: 'app' })
+    .pipe(dest('dist'))
 }
 
-function cleanDist(){
+function cleanDist() {
   return del('dist');
 }
 
