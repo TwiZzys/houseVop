@@ -1,5 +1,12 @@
 body {
   @extend %raleway-400;
-  line-height: 16px;
+  font-size: 16px;
+  line-height: 24px;
   color: #fff;
+}
+
+.container {
+  max-width: 1120px;
+  padding: 0 10px;
+  margin: 0 auto;
 }
