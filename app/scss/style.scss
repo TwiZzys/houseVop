@@ -229,4 +229,41 @@
   }
 }
 
+.footer {
+  background: #2D343C;
+  padding: 70px 0 50px;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    max-width: 242px;
+  }
+
+  &__list {
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.05em;
+  }
+
+  &__list-item {
+    margin-bottom: 15px;
+  }
+
+  &__link-email {
+    @extend %play-700;
+    color: $accent;
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+  }
+  &__social-item + &__social-item {
+    margin-left: 25px;
+  }
+}
+
 @import 'media';
