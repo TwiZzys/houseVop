@@ -131,14 +131,14 @@
             размеров и форм
             шрифтов, используя Lorem Ipsum для распечатки образцов.
           </p>
-          <form class="view__form" action="#">
-            <input class="view__form-input" type="text" placeholder="Ваше имя">
-            <input class="view__form-input" type="text" placeholder="Ваш телефон">
-            <p class="view__form-text">
+          <form class="view__form form" action="#">
+            <input class="form__input" type="text" placeholder="Ваше имя">
+            <input class="form__input" type="text" placeholder="Ваш телефон">
+            <p class="form__text">
               *Мы никому не передаем ваши данные.
               И не сохраняем ваш номер в базу.
             </p>
-            <button class="view__form-btn" type="submit">
+            <button class="form__btn" type="submit">
               Посмотреть район
             </button>
           </form>
@@ -150,6 +150,32 @@
         <img class="video-popup__img" src="images/play.svg" alt="play icon">
       </a>
     </div>
+    <div class="map">
+      <div class="container">
+        <h2 class="map__title title">
+          Район на карте
+        </h2>
+        <img class="map__img" src="images/map.jpg" alt="">
+      </div>
+    </div>
+    <section class="contact">
+      <div class="container">
+        <h2 class="contact__title title">
+          Есть вопросы?
+        </h2>
+        <form class="contact__form form" action="#">
+          <p class="form__text">
+            *Мы никому не передаем ваши данные.
+            И не сохраняем ваш номер в базу.
+          </p>
+          <input class="form__input contact__form-input" type="text" placeholder="Ваше имя">
+          <input class="form__input contact__form-input" type="text" placeholder="Ваш телефон">
+          <button class="form__btn" type="submit">
+            Посмотреть район
+          </button>
+        </form>
+      </div>
+    </section>
   </main>
   <script src="js/main.min.js"></script>
 </body>

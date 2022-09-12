@@ -135,13 +135,13 @@
 .view {
   background: url(../images/view-bg.jpg) no-repeat;
   background-size: cover;
+  padding: 180px 0;
 
   &__title {
     margin-bottom: 50px;
   }
 
   &__inner {
-    padding: 180px 0;
     display: flex;
     justify-content: space-between;
   }
@@ -157,8 +157,10 @@
     align-items: center;
     max-width: 544px;
   }
+}
 
-  &__form-input {
+.form {
+  &__input {
     width: 256px;
     height: 50px;
     background: rgba(#fff, .2);
@@ -167,11 +169,11 @@
     margin-bottom: 35px;
   }
 
-  &__form-input::placeholder {
+  &__input::placeholder {
     text-align: center;
   }
 
-  &__form-text {
+  &__text {
     font-size: 13px;
     line-height: 16px;
     color: #E7E7E7;
@@ -179,7 +181,7 @@
     max-width: 257px;
   }
 
-  &__form-btn {
+  &__btn {
     @extend %raleway-700;
     line-height: 27px;
     align-self: flex-start;
@@ -199,6 +201,32 @@
   justify-content: center;
   align-items: center;
   margin: 0 auto 180px;
+}
+
+.map {
+  margin-bottom: 180px;
+
+  &__title {
+    margin-bottom: 100px;
+  }
+}
+
+.contact {
+  margin-bottom: 180px;
+
+  &__title {
+    margin-bottom: 50px;
+  }
+
+  &__form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__form-input {
+    margin: 0;
+  }
 }
 
 @import 'media';
